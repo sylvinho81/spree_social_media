@@ -1,23 +1,22 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
 <% content_for :page_title do %>
-  <%= t('socialmedia.settings.title') %>
+  <%= Spree.t('socialmedia.settings.title') %>
 <% end %>
 
 <%= form_tag admin_socialmedia_settings_path, :method => :put do %>
-  <fieldset id="preferences" data-hook>
-    <legend align="center"><%= t('socialmedia.settings.title')%></legend>
-  <% @preferences.each do |key|
-      translation_key = 'socialmedia.settings.'+key.to_s.gsub(/^socialmedia_/, '')+'.title'
-      type = @config.preference_type(key) %>
-    <div class="field">
-      <%= label_tag(key, t(translation_key) + ': ') + tag(:br) if type != :boolean %>
-      <%= preference_field_tag(key, @config[key], :type => type) %>
-      <%= label_tag(key, t(translation_key)) + tag(:br) if type == :boolean %> <br />
-    </div>
-  <% end %>
-    <div class="form-buttons filter-actions actions" data-hook="buttons">
-      <%= button t(:update), 'icon-refresh' %>
+  <fieldset id="preferences" data-hook class="no-border-top">
+    <% @preferences.each do |key|
+        translation_key = 'network.'+key.to_s.gsub(/^socialmedia_/, '')
+        type = @config.preference_type(key) %>
+      <div class="field">
+        <%= label_tag(key, Spree.t(translation_key) + ': ') + tag(:br) if type != :boolean %>
+        <%= preference_field_tag(key, @config[key], :type => type) %>
+        <%= label_tag(key, Spree.t(translation_key)) + tag(:br) if type == :boolean %> <br />
+      </div>
+    <% end %>
+    <div class="form-actions" data-hook="buttons">
+      <%= button Spree.t('actions.update'), 'save' %>
+      <span class="or"><%= Spree.t(:or) %></span>
+      <%= button_link_to Spree.t('actions.cancel'), edit_admin_general_settings_url, icon: 'delete' %>
     </div>
   </fieldset>
 <% end %>

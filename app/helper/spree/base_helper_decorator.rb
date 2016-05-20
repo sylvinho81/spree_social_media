@@ -4,24 +4,17 @@ Spree::BaseHelper.class_eval do
     options = {
       :list_class          => 'social inline',
       :element_class       => '',
-      :use_images          => true,
       :dynamic_backgrounds => true
     }.merge(options)
 
     output  = "<ul class=\"#{options[:list_class]}\">"
 
-    networks = [:facebook, :twitter, :tuenti, :google_plus, :pinterest, :youtube, :flickr, :blog]
-    networks.each do |network|
-      link = nil
-      if options[:use_images]
-        image = image_tag("store/social/social-icon-#{network.to_s}.png", :alt => network.to_s.titlecase)
-        link = link_to_social_media(network, {:text => image})
-      else
-        link = link_to_social_media(network)
-      end
-
+    networks = [:facebook, :twitter, :google_plus, :pinterest, :youtube, :flickr, :skype]
+    networks_icons = [:facebook, :twitter, 'google-plus-official', :pinterest, :youtube, :skype]
+    networks.each_with_index do |network, i|
+      link = link_to_social_media(network, {:icon => networks_icons[i].to_s})
       if link
-        output << "<li class=\"#{options[:element_class]} #{('icon background-'+network.to_s) if options[:dynamic_backgrounds]}\">"+link+'</li>'
+        output << "<li>"+link+'</li>'
       end
     end
 
@@ -44,7 +37,10 @@ Spree::BaseHelper.class_eval do
       result = link unless link.empty?
 
       if link and !link.empty? and options[:anchor]
-        result = link_to options[:text], link, options.delete_if{|key, value| [:anchor, :text].include? key}
+        result = "<i class='fa fa-#{options[:icon]}' aria-hidden='true'></i>" + "  "
+        result << (link_to  link, target: options[:target] do
+                    Spree.t("socialmedia.settings.#{options[:text].downcase}.title")
+                 end)
       end
     end
 

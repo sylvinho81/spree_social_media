@@ -1,29 +1,27 @@
 es:
-  socialmedia:
-    settings:
-      title: "Medios sociales"
-      facebook:
-        title: "Facebook"
-      twitter:
-        title: "Twitter"
-      tuenti:
-        title: "Tuenti"
-      google_plus:
-        title: "Google+"
-      pinterest:
-        title: "Pinterest"
-      youtube:
-        title: "Youtube"
-      flickr:
-        title: "Flickr"
-      blog:
-        title: "Enlace a tu blog"
-    network:
-      facebook: "Facebook"
-      twitter: "Twitter"
-      tuenti: "Tuenti"
-      google_plus: "Google+"
-      pinterest: "Pinterest"
-      youtube: "Youtube"
-      flickr: "Flickr"
-      blog: "Blog"
+  spree:
+    socialmedia:
+      settings:
+        title: "Medios sociales"
+        facebook:
+          title: "Síguenos en Facebook"
+        twitter:
+          title: "Síguenos en Twitter"
+        google_plus:
+          title: "Síguenos en Google+"
+        pinterest:
+          title: "Síguenos en Pinterest"
+        youtube:
+          title: "Síguenos en Youtube"
+        flickr:
+          title: "Síguenos en Flickr"
+        skype:
+          title: "Skype"
+      network:
+        facebook: "Facebook"
+        twitter: "Twitter"
+        google_plus: "Google+"
+        pinterest: "Pinterest"
+        youtube: "Youtube"
+        flickr: "Flickr"
+        skype: "Skype"

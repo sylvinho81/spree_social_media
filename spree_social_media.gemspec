@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_redsys'
+  s.name        = 'spree_social_media'
   s.version     =  '3.0.0'
   s.summary     = 'Social media links admin panel'
   s.description = 'Adds an admin panel for easy management of social media links'

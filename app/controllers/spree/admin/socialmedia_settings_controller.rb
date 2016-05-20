@@ -7,10 +7,10 @@ module Spree
                         :socialmedia_twitter,
                         :socialmedia_google_plus,
                         :socialmedia_pinterest,
-                        :socialmedia_tuenti,
                         :socialmedia_youtube,
                         :socialmedia_flickr,
-                        :socialmedia_blog]
+                        :socialmedia_skype
+                        ]
       end
 
       def update

@@ -4,5 +4,5 @@
 # Examples
 #
 '3.0.x'  => { :branch => 'master' }
-
+'3.0.x'  => { :branch => '3-0-stable' }
 

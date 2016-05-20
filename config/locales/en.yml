@@ -1,0 +1,32 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  socialmedia:
+    settings:
+      title: "Social media"
+      facebook:
+        title: "Facebook link"
+      twitter:
+        title: "Twitter link"
+      tuenti:
+        title: "Tuenti link"
+      google_plus:
+        title: "Google+"
+      pinterest:
+        title: "Pinterest"
+      youtube:
+        title: "Youtube link"
+      flickr:
+        title: "Flickr link"
+      blog:
+        title: "Link to your blog"
+    network:
+      facebook: "Facebook"
+      twitter: "Twitter"
+      tuenti: "Tuenti"
+      google_plus: "Google+"
+      pinterest: "Pinterest"
+      youtube: "Youtube"
+      flickr: "Flickr"
+      blog: "Blog"

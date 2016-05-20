@@ -1,0 +1,68 @@
+// Variables
+
+$defaultBackground:        #000000;
+$defaultBackgroundOnHover: #666666;
+
+// Mixin
+@mixin transition {
+  transition: all 0.3s cubic-bezier(0.42, 0, 1, 1) 0s;
+  -moz-transition: all 0.3s cubic-bezier(0.42, 0, 1, 1) 0s;
+  -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 1, 1) 0s;
+  -o-transition: all 0.3s cubic-bezier(0.42, 0, 1, 1) 0s;
+}
+
+ul {
+
+  &.social {
+
+    li.icon {
+      background: $defaultBackground;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      margin: 0 3px 3px;
+
+      &:hover {
+        @include transition;
+        background: $defaultBackgroundOnHover;
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        border-radius: 0px;
+          -moz-border-radius: 0px;
+          -webkit-border-radius: 0px;
+      }
+
+      &.background-twitter:hover {
+        @include transition;
+        background: #1DCAFF;
+      }
+      &.background-facebook:hover {
+        @include transition;
+        background: #3B5998;
+      }
+      &.background-linkedin:hover {
+        @include transition;
+        background: #1086B6;
+      }
+      &.background-google_plus:hover {
+        @include transition;
+        background: #E24B40;
+      }
+      &.background-pinterest:hover {
+        @include transition;
+        background: #B8242A;
+      }
+      &.background-youtube:hover {
+        @include transition;
+        background: #C9312C;
+      }
+      &.background-tuenti:hover {
+        @include transition;
+        background: #0079C1;
+      }
+      &.background-flickr:hover {
+        @include transition;
+        background: #E52A82;
+      }
+    }
+  }
+}

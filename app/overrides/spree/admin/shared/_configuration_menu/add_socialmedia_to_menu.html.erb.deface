@@ -1,0 +1,3 @@
+<!-- insert_after "code[erb-loud]:contains('t(:general_settings)')" -->
+
+<%= configurations_sidebar_menu_item t('socialmedia.settings.title'), edit_admin_socialmedia_settings_path %>

@@ -1,0 +1,29 @@
+es:
+  socialmedia:
+    settings:
+      title: "Medios sociales"
+      facebook:
+        title: "Facebook"
+      twitter:
+        title: "Twitter"
+      tuenti:
+        title: "Tuenti"
+      google_plus:
+        title: "Google+"
+      pinterest:
+        title: "Pinterest"
+      youtube:
+        title: "Youtube"
+      flickr:
+        title: "Flickr"
+      blog:
+        title: "Enlace a tu blog"
+    network:
+      facebook: "Facebook"
+      twitter: "Twitter"
+      tuenti: "Tuenti"
+      google_plus: "Google+"
+      pinterest: "Pinterest"
+      youtube: "Youtube"
+      flickr: "Flickr"
+      blog: "Blog"

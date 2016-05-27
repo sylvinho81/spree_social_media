@@ -10,7 +10,7 @@ Spree::BaseHelper.class_eval do
     output  = "<ul class=\"#{options[:list_class]}\">"
 
     networks = [:facebook, :twitter, :google_plus, :pinterest, :youtube, :flickr, :skype]
-    networks_icons = [:facebook, :twitter, 'google-plus-official', :pinterest, :youtube, :skype]
+    networks_icons = [:facebook, :twitter, 'google-plus-official', :pinterest, :youtube, :flickr, :skype]
     networks.each_with_index do |network, i|
       link = link_to_social_media(network, {:icon => networks_icons[i].to_s})
       if link

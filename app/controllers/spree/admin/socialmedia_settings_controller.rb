@@ -20,6 +20,7 @@ module Spree
           next unless config.has_preference? name
           config[name] = value
         end
+        flash[:success] = Spree.t(:successfully_updated, resource: Spree.t('social_media.settings.title'))
 
         redirect_to edit_admin_socialmedia_settings_path
       end
